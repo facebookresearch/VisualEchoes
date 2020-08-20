@@ -21,15 +21,15 @@ If you find our data or project useful in your research, please cite:
       year = {2020}
     }
 
-## Demo Video of Echolocation Simulation
+### Demo Video of Echolocation Simulation
 We show an example of the agent navigating in one replica scene and performing echolocation. The agent emits 3ms chirp signals from 20Hz to 20kHz and receives echo responses from the room. Echoes resulting from the emitted chirps reflect the scene geometry.
 
 [<img src="http://vision.cs.utexas.edu/projects/visualEchoes/simulation.png" width="60%">](https://youtu.be/MobPvUf6F20)
 
-## Overview of VisualEchoes Dataset
+### Overview of VisualEchoes Dataset
 We provide the (RGB, Depth, Echo) data generated using [habitat-sim](https://github.com/facebookresearch/habitat-sim) and [sound-spaces](https://github.com/facebookresearch/sound-spaces) on [Replica](https://github.com/facebookresearch/Replica-Dataset) dataset.  The source audio "chirp" we use is a sweep signal from 20Hz - 20kHz (the human-audible range) within a duration of 3ms (3ms_sweep.wav). The echoes are obtained by convolving the 1s audio (with the sweep signal in the first 3ms) with the corresponding binaural echolocation room impuse responses (RIRs) for each of the four orientations (0&deg;, 90&deg;, 180&deg;, 270&deg;) at the agents' locations. When the agent emits sound from its position, convolving the emitted omnidirectional audio with the corresponding binaural RIR generates the binaural echo responses from the environment the agent hears when facing each orientation.
 
-## Download the Data
+### Data Download
 1. The VisualEchoes dataset contains the RGB images, depth maps, echo responses generated from Replica dataset. Run the commands below to download the rgb-depth pairs (4 different resolutions), echoes, room impuse responses used for echolocation for the 1,740 navigable locations x 4 orientations = 6,960 agent states used in the paper. 
 ```
 # rgb-depth pairs of 4 different resolutions
@@ -64,7 +64,7 @@ wget http://dl.fbaipublicfiles.com/VisualEchoes/echoes_all.tar.gz
 wget http://dl.fbaipublicfiles.com/VisualEchoes/echolocation_RIRs_all.tar.gz
 ```
 
-## Echolocation
+### Echolocation
 The data/sweep_audio/ directory contains the 3ms sweep signal we use for echolocation in our paper as well as some other types of sweep signals. To generate echo responses for other types of 1s signals of your choice, place the directory of echolocation room impluse response properly under your data directory and use the getEchoes.py script to perform echolocation.
 ```
 python getEchoes.py
