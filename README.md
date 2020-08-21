@@ -75,4 +75,4 @@ python getEchoes.py
 The RGB and depth data are generated using [habitat-sim](https://github.com/facebookresearch/habitat-sim) on [Replica](https://github.com/facebookresearch/Replica-Dataset) dataset. The binaural RIRs we use for echolocation is a subset of the binaural RIRs from [sound-spaces](https://github.com/facebookresearch/sound-spaces).
 
 ### Licence
-The VisualEchoes dataset is CC BY 4.0 licensed, as found in the LICENSE file.
+The VisualEchoes dataset is CC BY 4.0 licensed, as found in the LICENSE file. Please also refer to the licence files for [habitat-sim](https://github.com/facebookresearch/habitat-sim), [Replica](https://github.com/facebookresearch/Replica-Dataset), and [sound-spaces](https://github.com/facebookresearch/sound-spaces).
